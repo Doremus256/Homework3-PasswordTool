@@ -52,7 +52,7 @@ function generatePassword() {
     optionsChoices.push(lowerOptions);
   }
   else {
-    console.log("Include lowercase: ")
+    console.log("Don't include lowercase: ")
   }
 
   // Uppercase: //
@@ -63,7 +63,7 @@ function generatePassword() {
     optionsChoices.push(upperOptions);
   }
   else {
-    console.log("Include uppers")
+    console.log("Don't include uppercase")
   }
 
   // Numberical Characters: //
@@ -72,6 +72,9 @@ function generatePassword() {
   if (passNumeric == true) {
     console.log("Include numbers: " + passNumeric);
     optionsChoices.push(numericOptions);
+  }
+  else {
+    console.log("Don't include numbers")
   }
 
   // Special Characters: //
@@ -82,7 +85,7 @@ function generatePassword() {
     optionsChoices.push(specialOptions);
   }
   else {
-    console.log("Include special characters: " + passSpecial);
+    console.log("Don't include special characters: " + passSpecial);
   }
 
 
@@ -105,7 +108,7 @@ function writePassword() {
 
 generateBtn.addEventListener("click", writePassword);
 
-generateCopy.addEventListener("click", function(){
+generateCopy.addEventListener("click", function () {
   let textthatsbeencopied = document.getElementById("password")
   textthatsbeencopied.select();
   document.execCommand("copy")
